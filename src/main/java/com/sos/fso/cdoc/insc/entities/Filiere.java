@@ -57,7 +57,7 @@ public class Filiere implements Serializable {
     @Column(name = "description")
     private String description;
     
-    @ManyToMany(mappedBy = "etudiant")
+    @ManyToMany(mappedBy = "etudiantChoices")
     private List<Etudiant> etudiantList = new ArrayList<>();
      
     

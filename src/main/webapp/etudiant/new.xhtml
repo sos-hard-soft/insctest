@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
-    <h:head>
-        <h1>Création d'un compte</h1>
-</h:head>
-    <h:body>
-    <ui:composition template="../resources/template.xhtml">
-       <ui:define name="content">	
-            <div class="row">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui" xmlns:adm="http://github.com/adminfaces"
+                template="#{layoutMB.template}">
+
+    <ui:define name="title">
+        Inscription Form
+    </ui:define>
+
+    <ui:define name="body">
                 <h:form>
         <p:messages for="update"/>
         <div class="col-lg-7">
@@ -50,8 +43,7 @@ and open the template in the editor.
                 <p:outputLabel value="Date de naissance"/>
                 <p:calendar id="dateNaissance" value="#{etudiantController.newEtudiant.dateNaissance}"
                                 mode="popup" pattern="dd/MM/yyyy"
-                                yearRange="c-100" locale="fr"
-                                showButtonPanel="true" navigator="true"
+                                locale="fr"
                                 required="true" requiredMessage="Veuillez selectionnez une Date de naissance" />
                 <p:message for="dateNaissance"/>
                 
@@ -94,8 +86,5 @@ pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[
             </p:panel>
         </div>
         </h:form>
-        </div>
-        </ui:define>
+    </ui:define>
     </ui:composition>
-    </h:body>
-</html>
